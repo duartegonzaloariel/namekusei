@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar</title>
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!--custom css-->
+    <link rel="stylesheet" href="../static/css/estilos-menu2.css">
+</head>
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="conteinera">
+        <nav class="nav-main">
+            <img src="../static/img/logos/logo.png" alt=logo class="nav-logo">
+            <div>
+                <p>Namekusei Propiedades</p>
+            </div>
+            <ul class="nav-menu show">
+                <li>
+                    <a href="namekusei.html">Namekusei</a>
+                </li>
+                <li>
+                    <a href="consultar.html">Consultar</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>  
+            </ul>
+            <ul class="nav-menu-right">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section>
+            <br><br>
+            <br><br>
+            <h1>Validación de formulario</h1>
+            <br><br>
+            <form name="formulario" action="https://formspree.io/f/xyyralyp" method="POST">
+                <label for="nombre">Nombre completo: </label>
+                <input type="text" name="nombre" maxlength="50" id="nombre">
+                <br><br>
+                <label for="edad">Edad:</label>
+                <input type="text" name="edad" size="3" maxlength="6" id="edad">
+                <br><br>
+                <label for="dni">DNI: </label>
+                <input type="text" name="dni" size="12" maxlength="18" id="dni">
+                <br><br>
+                <label for="correo">correo electronico: </label>
+                <input type="text" name="correo" size="12" maxlength="18" id="correo">
+                <br><br>
+                <label for="interes">Propiedad: </label>
+                <select name="interes" id="interes">
+                    <option value="Elegir">Elegir</option>
+                    <option value="Propiedad1">Kame House</option>
+                    <option value="Propiedad2">Halconia</option>
+                    <option value="Propiedad3">Cubil Felino</option>
+                    <option value="Propiedad4">Casa Piña</option>
+                </select>
+            </form>
+            <br>
+            <p id="error"></p>
+            <br>
+            <input type="button" id="bl" value="Enviar" onclick="validarEnviar()">
+            <script src="../static/js/validacion.js"></script>
+
+        </section> 
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <footer class="footerr">
+        <h3>Copyright</h3>
+    </footer>
+    <!-- scroll revear-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- union javas-cript-->
+    <script src="../static/js/main.js"></script>
+</body>
+</html>
