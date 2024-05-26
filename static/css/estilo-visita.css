@@ -4,13 +4,21 @@
     --color-letra:#486f99; /* color titulo principal y de las cartas */
     --color-fondos-letras:#c4d2e7; /* color de fondo de donde hay texto */
   }
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    background: var(--color-fondo-pagina); 
+    color: var(--color-texto-principal); 
+    font-family: 'Roboto', sans-serif;
+}
+
 a{
-    color: #fff;
+    color: var(--color-letra);
     text-decoration: none;
 }
 ul{
@@ -85,4 +93,74 @@ section{
 }
 .cabecera ul{
     display: flex;
+}
+.nav-main ul.nav-menu {
+    margin-left: 30px; /* Aplica un margen izquierdo de 30 píxeles a las listas no ordenadas (ul) con la clase .nav-menu dentro de .nav-main */
+    margin-top: 35px; /* Aplica un margen superior de 35 píxeles a las listas no ordenadas (ul) con la clase .nav-menu dentro de .nav-main */
+}
+/*____________________________ responsive design ____________________________*/
+@media (max-width: 1200px) {
+    .news-card {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+
+    .nav-main ul.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -30px;
+        background: #0d054e;
+        height: 100%;
+        width: 250px;
+        padding: 30px;
+        padding-top: 80px;
+        transform: translateX(-1300px);
+        opacity: .9;
+        transition: transform .5s ease-in-out; 
+        z-index: 20; /* Ajusta el z-index del menú desplegable */
+    }
+
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-30px);        
+    }
+
+    .nav-main ul.nav-menu li {
+        padding: 20px 0;
+    }
+
+    .nav-main ul.nav-menu-right {
+        margin-right: 80px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 30; /* Ajusta el z-index del botón del menú */
+    }
+}
+
+@media (max-width: 700px) {
+    .news-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-conteiner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav-main p {
+        font-size: 0px;
+        position: initial;
+    }
+}
+
+@media (max-width: 500px) {
+    .baner-one {   
+        margin: 90px 0;
+        padding: 50px;
+        height: 1150px;
+        background-size: cover;
+        background-repeat: no-repeat;  
+        display: flex;
+        flex-direction: column;
+    }
 }
