@@ -1,0 +1,348 @@
+    :root {
+        --color-fondo-pagina: #e2e8f3; /* color fondo de pagina */
+        --color-texto-principal: #000;
+        --color-letra:#486f99; /* color titulo principal y de las cartas */
+        --color-fondos-letras:#c4d2e7; /* color de fondo de donde hay texto */
+        --color-nuevo: #00ff00; /* ejemplo de color verde */
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: var(--color-fondo-pagina); 
+        color: var(--color-texto-principal); 
+        font-family: 'Pacifico', sans-serif;
+    }
+
+    a{
+        color: var(--color-letra);
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    .conteinera {/*container del encabezado de pagina*/
+        background-color:var(--color-fondo-pagina);
+        width: 100%;
+        margin: auto;
+        padding-bottom: 1px;
+    }
+
+    .conteinerc {/*container del baner y tarjetas*/
+        width: 100%;
+        margin: auto;
+    }
+
+    /* Clase para la fuente Indie Flower */
+    .indie-flower-title {
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: var(--color-texto-principal); /* Puedes cambiar el color si lo deseas */
+}
+/*____________________________estilos de la navegacion____________________________*/
+
+.nav-main {/*fondo del encabezado principal de la pagina*/
+    background-color: var(--color-fondos-letras); /* Aplica un color de fondo utilizando la variable CSS --color-fondos-letras */
+    font-size: 15px; /* Establece el tamaño de la fuente a 15 píxeles */
+    display: flex; /* Establece un contexto de flexbox para este elemento, lo que permite usar las propiedades de flexbox en sus elementos hijos */
+    justify-content: space-between; /* Distribuye el espacio sobrante entre los elementos hijos de forma equitativa, con el primer hijo alineado al principio y el último al final */
+    height: 90px; /* Establece la altura del elemento en 120 píxeles */
+    padding: 10px 0; /* Aplica un relleno de 10 píxeles en la parte superior e inferior del elemento, y 0 píxeles a los lados */
+    width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
+}
+
+.nav-logo {
+    height: 70px; /* Establece la altura del logotipo a 100 píxeles */
+    margin-left: 50px; /* Aplica un margen izquierdo de 50 píxeles al logotipo */
+}
+
+.nav-main div {
+    flex: 1; /* Hace que los divs dentro de .nav-main se expandan para llenar el espacio disponible usando el modelo de caja flexible (flexbox) */
+}
+
+.nav-main p {
+    margin-top: 20px; /* Aplica un margen superior de 20 píxeles a los párrafos dentro de .nav-main */
+    font-size: 50px; /* Establece el tamaño de la fuente a 50 píxeles para los párrafos dentro de .nav-main */
+    position: initial; /* Restablece la propiedad position a su valor por defecto (initial) para los párrafos dentro de .nav-main */
+}
+
+.nav-main ul {
+    display: flex; /* Establece que las listas no ordenadas (ul) dentro de .nav-main usen el modelo de caja flexible (flexbox) para sus elementos hijos */
+}
+
+.nav-main ul li {
+    padding: 10px; /* Aplica un relleno de 10 píxeles a los elementos de lista (li) dentro de ul en .nav-main */
+}
+
+.nav-main ul.nav-menu {
+    margin-left: 30px; /* Aplica un margen izquierdo de 30 píxeles a las listas no ordenadas (ul) con la clase .nav-menu dentro de .nav-main */
+    margin-top: 35px; /* Aplica un margen superior de 35 píxeles a las listas no ordenadas (ul) con la clase .nav-menu dentro de .nav-main */
+}
+
+.nav-main ul.nav-menu-right {
+    margin-top: 35px; /* Aplica un margen superior de 35 píxeles a las listas no ordenadas (ul) con la clase .nav-menu-right dentro de .nav-main */
+    margin-right: 35px; /* Aplica un margen derecho de 35 píxeles a las listas no ordenadas (ul) con la clase .nav-menu-right dentro de .nav-main */
+}
+
+.nav-main ul li a:hover {
+    border-bottom: 2px solid var(--color-letra); /* Aplica un borde inferior de 2 píxeles de ancho y del color definido en la variable --color-letra a los enlaces dentro de li en ul dentro de .nav-main cuando se pasa el cursor por encima (hover) */
+    opacity: 0.7; /* Reduce la opacidad al 70% para los enlaces dentro de li en ul dentro de .nav-main cuando se pasa el cursor por encima (hover) */
+}
+
+.nav-main ul li a {
+    padding: 6px; /* Aplica un relleno de 6 píxeles a los enlaces dentro de li en ul dentro de .nav-main */
+}
+
+.menu-btn {
+    position: absolute; /* Establece la posición del botón de menú como absoluta, permitiendo que se posicione en relación a su contenedor más cercano que no sea estático */
+    cursor: pointer; /* Cambia el cursor a una mano apuntando (pointer) cuando se pasa sobre el botón de menú */
+    top: 45px; /* Posiciona el botón de menú a 45 píxeles desde la parte superior del contenedor */
+    right: 45px; /* Posiciona el botón de menú a 45 píxeles desde la parte derecha del contenedor */
+    font-size: 30px; /* Establece el tamaño de la fuente del botón de menú a 30 píxeles */
+    display: none; /* Oculta el botón de menú por defecto */
+}
+
+hr {
+    margin: 5px; /* Aplica un margen de 5 píxeles a los elementos hr (línea horizontal) */
+}
+
+
+/*____________________________seccion del baner____________________________*/
+section{
+    width: 100%;
+    margin: auto;
+}
+.baner-one {
+    margin: 90px 0;
+    padding: 50px;
+    height: 360px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/en_pagina/fondo2.png'); /*ruta relativa porque css e img estan en ramas diferentes*/
+    position: relative;
+}
+
+.baner-one h2 {
+    color: var(--color-letra);
+    margin: 20px 0;
+    padding-left: 35px; /* Ajusta este valor según la cantidad de sangría que desees */
+}
+  
+.baner-one p {
+    font-size: 18px;
+    color: var(--color-letra);
+    line-height: 1.5;
+    margin: 35px; /* Ajusta este valor según la cantidad de espacio que desees alrededor del párrafo */
+}
+
+
+/* Capa de opacidad para la imagen de fondo */
+.baner-one::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Color blanco transparente con opacidad reducida */
+    z-index: 0; /* Asegura que la capa de opacidad esté detrás de todo */
+}
+/* Filtro de opacidad inverso para el título */
+.baner-one h2 {
+    filter: brightness(100%); /* Revertimos los efectos de brillo solo para el título */
+}
+.baner-one p {
+    filter: brightness(100%); /* Revertimos los efectos de brillo solo para el título */
+}
+
+
+
+/*____________________________ Cartas de Inmuebles____________________________*/
+.card{
+    width: 90%;
+    margin: auto;
+}
+h2 {
+    color: var(--color-letra);
+    margin-left: 20px; /* Agrega una sangría de 20px a la izquierda del título */
+}
+
+.news-card{
+    background-color: var(--color-fondos-letras);
+    margin-bottom: 40px;
+    padding: 20px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:30px;
+    
+}
+.news-card img{
+    width: 100%;
+    height: 250px;
+    margin:20px 0;
+    box-shadow: 10px 10px 10px #000;/*sombra de las tarjetas*/
+    
+}
+.news-card h3{/*titulo de descripcion de tarjetas*/
+    color: var(--color-letra);
+    margin: 5px 0
+} 
+.news-card p {/*texto de descripcion de tarjetas*/
+    color: var(--color-letra);
+    margin: 10px 0;
+}  
+
+/* redes sociales*/
+.social{
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.social p{
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+.link-social {
+    color: #000;
+    display: flex;
+    align-items: 30px;
+    justify-content: center;
+}
+.link-social a{
+    color: #000;
+    margin: 0 30px;
+}
+.link-social i{
+    font-size: 50px;
+}
+/*____________________________redes sociales____________________________*/
+.social{
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.social p{
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+.link-social {
+    color: #486f99;
+    display: flex;
+    align-items: 30px;
+    justify-content: center;
+}
+.link-social a{
+    color: #486f99;
+    margin: 0 30px;
+}
+.link-social i{
+    font-size: 50px;
+}
+/*____________________________footers links____________________________*/
+.footer-links{
+    width: 100%;
+    margin: auto;
+    background:linear-gradient(#c4d2e7,#e3e8f3);
+    color: #616161;
+    font-size: 15px; 
+    padding: 35px 0;
+}
+.footer-conteiner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.footer-conteiner ul{
+    margin: 0 auto;
+}
+.footer-conteiner li{
+    line-height: 2;
+}
+.footerr{
+    background:var(--color-fondos-letras);
+    color: var(--color-letra);
+    font-size: 15px;
+    padding: 30px 0;
+    text-align: center;
+}
+/*____________________________ responsive design ____________________________*/
+@media (max-width: 1200px) {
+    .news-card {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+
+    .nav-main ul.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -30px;
+        background: #0d054e;
+        height: 100%;
+        width: 250px;
+        padding: 30px;
+        padding-top: 80px;
+        transform: translateX(-1300px);
+        opacity: .9;
+        transition: transform .5s ease-in-out; 
+        z-index: 20; /* Ajusta el z-index del menú desplegable */
+    }
+
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-30px);        
+    }
+
+    .nav-main ul.nav-menu li {
+        padding: 20px 0;
+    }
+
+    .nav-main ul.nav-menu-right {
+        margin-right: 80px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 30; /* Ajusta el z-index del botón del menú */
+    }
+}
+
+@media (max-width: 700px) {
+    .news-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-conteiner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .nav-main p {
+        font-size: 0px;
+        position: initial;
+    }
+}
+
+@media (max-width: 500px) {
+    .baner-one {   
+        margin: 90px 0;
+        padding: 50px;
+        height: 1150px;
+        background-size: cover;
+        background-repeat: no-repeat;  
+        display: flex;
+        flex-direction: column;
+    }
+}
